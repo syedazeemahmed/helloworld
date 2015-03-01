@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bvy-hK-1Rw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4c9-7V-pVh">
+            <objects>
+                <navigationController id="Bvy-hK-1Rw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="93i-sg-zNv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RPp-V9-dj4" kind="relationship" relationship="rootViewController" id="w6N-ED-k2e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ByV-ob-Kln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="289"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fex-zn-aEh">
+            <objects>
+                <viewController id="RPp-V9-dj4" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vwP-2k-ete"/>
+                        <viewControllerLayoutGuide type="bottom" id="25w-cC-2U9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vlw-5S-95B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koi-3C-oId">
+                                <rect key="frame" x="245" y="285" width="110" height="30"/>
+                                <state key="normal" title="Show next View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="RPp-V9-dj4" eventType="touchUpInside" id="Wm7-ec-EGK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-Mj-ScU">
+                                <rect key="frame" x="282" y="228" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="09S-b3-SrL"/>
+                                    <constraint firstAttribute="width" constant="37" id="QE3-TQ-dqe"/>
+                                </constraints>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayButtonPressed:" destination="RPp-V9-dj4" eventType="touchUpInside" id="tnW-ep-zLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Q-na-r1Q">
+                                <rect key="frame" x="249" y="346" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BrX-wJ-vIg"/>
+                                    <constraint firstAttribute="width" constant="103" id="G2S-z4-uec"/>
+                                </constraints>
+                                <state key="normal" title="HOW TO PLAY">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="howToPlayButtonPressed:" destination="RPp-V9-dj4" eventType="touchUpInside" id="VjE-tn-51O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="A4Q-na-r1Q" secondAttribute="centerX" id="Dgv-qo-9Ho"/>
+                            <constraint firstItem="A4Q-na-r1Q" firstAttribute="top" secondItem="koi-3C-oId" secondAttribute="bottom" constant="31" id="GX1-ad-JJu"/>
+                            <constraint firstAttribute="centerX" secondItem="NLR-Mj-ScU" secondAttribute="centerX" id="QJd-RB-I9n"/>
+                            <constraint firstAttribute="centerX" secondItem="koi-3C-oId" secondAttribute="centerX" id="hd8-KB-Tp6"/>
+                            <constraint firstItem="koi-3C-oId" firstAttribute="top" secondItem="NLR-Mj-ScU" secondAttribute="bottom" constant="27" id="z36-h4-x7s"/>
+                            <constraint firstAttribute="centerY" secondItem="koi-3C-oId" secondAttribute="centerY" id="zYI-mE-Uf1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OC6-W3-pMf"/>
+                    <connections>
+                        <outlet property="PlayButton" destination="NLR-Mj-ScU" id="6Uo-6Z-pMj"/>
+                        <outlet property="howToPlayButton" destination="A4Q-na-r1Q" id="ko6-yA-HBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kun-PD-MKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="289"/>
+        </scene>
+    </scenes>
+</document>
